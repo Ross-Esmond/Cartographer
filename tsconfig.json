@@ -3,10 +3,12 @@
 		"outDir": "./dist/",
 		"sourceMap": true,
 		"noImplicitAny": true,
-		"module": "commonjs",
-		"target": "es5"
+		"module": "umd",
+		"moduleResolution": "node",
+		"target": "ES2015"
 	},
 	"include": [
-		"./src/**/*"
+		"./src/**/*.ts",
+		"./tests/**/*.ts"
 	]
 }

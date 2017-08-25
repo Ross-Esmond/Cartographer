@@ -4,7 +4,7 @@
   "description": "An open ended data graphing framework.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha-webpack test/"
+    
   },
   "author": "Ross-Esmond",
   "license": "MIT",
@@ -22,8 +22,13 @@
     "node-sass": "^4.5.0",
     "postcss-loader": "^2.0.6",
     "sass-loader": "^4.1.1",
+    "typescript": "^2.4.2",
     "wallaby-webpack": "0.0.38",
     "webpack": "^2.2.0",
     "webpack-dev-server": "^2.2.0"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.74",
+    "lodash": "^4.17.4"
   }
 }

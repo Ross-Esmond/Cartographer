@@ -6,11 +6,11 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'build.js'
+    filename: 'build.js',
+    libraryTarget: "umd"
   },
-
   resolve: {
-    extensions: [".ts", ".ts"]
+    extensions: [".js", ".ts"]
   },
   module: {
     rules: [
