@@ -6,8 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'build.js',
-    libraryTarget: "umd"
+    filename: 'build.js'
   },
   resolve: {
     extensions: [".js", ".ts"]
@@ -17,31 +16,19 @@ module.exports = {
       {
         test: /\.scss$/,
 				use: [
-				"style-loader",
-				"css-loader",
-				"postcss-loader",
-				{
-					loader: "sass-loader",
-					options: {
-						indentedSyntax: true
-					}
-				}]
+          "style-loader",
+          "css-loader",
+          "postcss-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              indentedSyntax: true
+            }
+          }]
       },
       {
         test: /\.ts?$/,
         loader: "awesome-typescript-loader"
-      },
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]?[hash]'
-        }
       }
     ]
   },

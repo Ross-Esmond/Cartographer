@@ -3,12 +3,18 @@
 		"outDir": "./dist/",
 		"sourceMap": true,
 		"noImplicitAny": true,
-		"module": "umd",
-		"moduleResolution": "node",
+		"module": "commonjs",
 		"target": "ES2015"
 	},
 	"include": [
 		"./src/**/*.ts",
 		"./tests/**/*.ts"
+	],
+	"typeRoots": [
+		"./node_modules/@types",
+		"./node_modules/intern/types"
+	],
+	"types": [
+		"intern"
 	]
 }

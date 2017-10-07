@@ -1,27 +1,5 @@
-export default {
-	fizzbuzz() {
-		var array = []
+import graph from "./graphing/graph";
 
-		for (var c = 1; c <= 100; c++) {
-			var result = ""
+var g = new graph(document.body);
 
-			if (c % 3 == 0) {
-				result += "fizz"
-			}
-
-			if (c % 5 == 0) {
-				result += "buzz"
-			}
-
-			array.push(result == "" ? c : result);
-		}
-
-		return array;
-	},
-
-	notFizzbuzz() {
-		var myVar = 0;
-
-		return myVar + 1;
-	}
-}
+g.update();

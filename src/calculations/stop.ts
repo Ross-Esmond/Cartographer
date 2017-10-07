@@ -1,20 +1,36 @@
 import gap from "./gap";
+import portal from "../graphing/portal";
 
 export default class stop {
-	Tracer: symbol;
+	portal: portal;
+	tracer: symbol;
 
-	Lower: gap[];
-	Higher: gap[];
+	constructor(portal: portal) {
+		this.portal = portal;
+		this.tracer = portal.create();
+	}
 
-	constructor(public name: string) {
-		this.Tracer = Symbol(name);
+	setAsOrigin() {
+		this.retrieve().setAsOrigin();
+	}
+
+	update(tracer: symbol) {
+		this.tracer = tracer;
+	}
+
+	retrieve() {
+		return this.portal.retrieve(this.tracer);
 	}
 
 	addLower(gap: gap) {
-		this.Lower.push(gap);
+		this.retrieve().lower.push(gap);
 	}
 
 	addHigher(gap: gap) {
-		this.Higher.push(gap);
+		this.retrieve().higher.push(gap);
+	}
+
+	calculate(): number {
+		return this.retrieve().calculate();
 	}
 }
